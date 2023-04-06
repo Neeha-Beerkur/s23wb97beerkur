@@ -7,6 +7,11 @@ block content
     div(class= "container-fluid")
         div(class = "row")  
             each item, index in results
-                div(class= "col-sm-2",) Gadjet_Name: #{item.Gadjet_Name}
-                div(class= "col-sm-2",) Gadjet_Price: #{item.Gadjet_Price}
-                div(class= "col-sm-2",) Gadjet_Type: #{item.Gadjet_Type}
+                div(class= "col-sm-2", onclick=`gadjets(${index})`)  Gadjet_Name: #{item.Gadjet_Name}
+                div(class= "col-sm-2", onclick=`gadjets(${index})`)  Gadjet_Price: #{item.Gadjet_Price}
+                div(class= "col-sm-2", onclick=`gadjets(${index})`)  Gadjet_Type: #{item.Gadjet_Type}
+
+    script.
+        function gadjets(index) {
+        alert(`I like Gadjets ${index+1}`)
+        }   
